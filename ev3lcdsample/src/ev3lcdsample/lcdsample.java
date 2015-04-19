@@ -30,16 +30,25 @@ public class lcdsample {
 		//	繰り返しここまで
 	}
 
-	//	ここから下は変更しないでください
+////////////////////////////////////////////////////////////////////////
+//ここから下は各関数を記しておきます．指示がない限り変更しないでください．
+
+	//LCD上に表示されている文字をすべてクリアします．
 	private static void lcdClear(){
 		LCD.clear();
 	}
+
+	//LCD上に数字を入力させたい場合の関数
 	private static void drawInt(int n, int x, int y){
 		LCD.drawInt(n, x, y);
 	}
+
+	//LCD上に文字列を入力させたい場合の関数
 	private static void drawStr(String str, int x, int y){
 		LCD.drawString(str, x, y);
 	}
+
+	//指定した時間(ミリ秒単位)処理を待機する
 	private static void Delay(int msec){
 		Delay.msDelay(msec);
 	}
