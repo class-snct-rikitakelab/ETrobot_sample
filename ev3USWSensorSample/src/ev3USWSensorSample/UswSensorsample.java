@@ -29,12 +29,16 @@ public class UswSensorsample {
 		// 繰り返しここまで
 	}
 
-	/////////////////////////////////////////////////////////////////////////////////////////////////////////
-	// ここから下は変更しないでください
+////////////////////////////////////////////////////////////////////////
+//ここから下は各関数を記しておきます．指示がない限り変更しないでください．
+
+	//LCD上に表示されている文字をすべてクリアします．
 	private static void  lcdclear(){
 		LCD.refresh();
 		LCD.clear();
 	}
+
+	//超音波センサから物体までの距離を測定し，値を得ます．
 	private static float getUltraSonicDistance(){
 		float Distance[] = new float[UltraSonicSensor.sampleSize()];
 		UltraSonicSensor.getDistanceMode();
@@ -42,9 +46,12 @@ public class UswSensorsample {
 		return (float) (Distance[0]*100.0);
 	}
 
+	//float型の値を表示できます．
 	private static void drawString(float cm,int x,int y){
 		LCD.drawString(String.format("%.1f"+"cm", cm), x, y);
 	}
+
+	//指定した時間(ミリ秒単位)処理を待機します．
 	private static void Delay(int msec){
 		Delay.msDelay(msec);
 	}
